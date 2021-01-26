@@ -4,7 +4,7 @@ import BgEffect from './BgEffect';
 
 const dimensions = Dimensions.get('window');
 
-export default function Main({snowflakesCount = 15, type}) {
+export default function Main({snowflakesCount = 15, typeEffect}) {
   return (
     <View
       style={[
@@ -12,7 +12,7 @@ export default function Main({snowflakesCount = 15, type}) {
         {width: dimensions.width, height: dimensions.height},
       ]}>
       {new Array(snowflakesCount).fill(true).map((_, i) => (
-        <BgEffect key={i} scene={dimensions} type={type} />
+        <BgEffect key={i} scene={dimensions} typeEffect={typeEffect} />
       ))}
     </View>
   );

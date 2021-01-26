@@ -12,8 +12,8 @@ const START_Y_POSITION = -30;
 // const type = ['❄', '❅', '❆'];
 const BgEffect_Types_Default = ['🌸'];
 
-export default function BgEffect({scene, type = BgEffect_Types_Default}) {
-  const [config, setConfig] = useState(() => getConfig(type));
+export default function BgEffect({scene, typeEffect = BgEffect_Types_Default}) {
+  const [config, setConfig] = useState(() => getConfig(typeEffect));
   const animatedY = useRef(new Animated.Value(START_Y_POSITION)).current;
   const animatedRotation = useRef(new Animated.Value(0)).current;
   const animatedSwing = useRef(new Animated.Value(0)).current;
@@ -57,7 +57,7 @@ export default function BgEffect({scene, type = BgEffect_Types_Default}) {
         useNativeDriver: true,
       }),
     ]).start(() => {
-      const newConfig = getConfig(type);
+      const newConfig = getConfig(typeEffect);
       setConfig(newConfig);
     });
   };
@@ -97,10 +97,10 @@ export default function BgEffect({scene, type = BgEffect_Types_Default}) {
   );
 }
 
-function getConfig(type) {
+function getConfig(typeEffect) {
   const size = randomInt(10, 20);
   const opacity = randomInt(3, 7) / 10;
-  const type = type[randomInt(0, 2)];
+  const type = typeEffect[randomInt(0, 2)];
   const xPosition = `${randomInt(0, 100)}%`;
 
   const fallDuration = randomInt(8000, 15000);
