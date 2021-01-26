@@ -12,7 +12,7 @@ const START_Y_POSITION = -30;
 // const type = ['❄', '❅', '❆'];
 const BgEffect_Types_Default = ['🌸'];
 
-export default function BgEffect({scene, typeEffect = BgEffect_Types_Default}) {
+function BgEffect({scene, typeEffect = BgEffect_Types_Default}) {
   const [config, setConfig] = useState(() => getConfig(typeEffect));
   const animatedY = useRef(new Animated.Value(START_Y_POSITION)).current;
   const animatedRotation = useRef(new Animated.Value(0)).current;
@@ -96,7 +96,7 @@ export default function BgEffect({scene, typeEffect = BgEffect_Types_Default}) {
     </Animated.Text>
   );
 }
-
+``
 function getConfig(typeEffect) {
   const size = randomInt(10, 20);
   const opacity = randomInt(3, 7) / 10;
@@ -129,3 +129,4 @@ function getConfig(typeEffect) {
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+export default BgEffect;

@@ -1,2 +1,2 @@
 
-export {default as BgEffect} from './bgEffect';
+export {default as BgEffect} from './bgEffect/index';

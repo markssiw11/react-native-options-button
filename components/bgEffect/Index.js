@@ -4,7 +4,7 @@ import BgEffect from './BgEffect';
 
 const dimensions = Dimensions.get('window');
 
-export default function Main({snowflakesCount = 15, typeEffect}) {
+function Main({snowflakesCount = 15, typeEffect}) {
   return (
     <View
       style={[
@@ -23,3 +23,4 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
 });
+export default Main;
