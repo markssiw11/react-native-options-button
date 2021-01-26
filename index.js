@@ -3,4 +3,4 @@
  */
 
 
-export { BgEffect} from './components'
+export { BgEffect, Effect} from './components'
