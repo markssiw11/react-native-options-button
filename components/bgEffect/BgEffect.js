@@ -98,7 +98,7 @@ function BgEffect({scene, typeEffect = BgEffect_Types_Default}) {
 }
 function getConfig(typeEffect) {
   const size = randomInt(10, 20);
-  const opacity = randomInt(3, 7) / 10;
+  const opacity = randomInt(5, 10) / 10;
   const type = typeEffect[randomInt(0, 2)];
   const xPosition = `${randomInt(0, 100)}%`;
 
