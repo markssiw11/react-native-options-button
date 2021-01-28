@@ -1,5 +1,5 @@
 {
-  "name": "react-native-bg-effect",
+  "name": "react-native-options-button",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,7 +13,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-vector-icons": "^7.1.0"
   },
   "devDependencies": {
     "react": "16.13.1",
