@@ -1,3 +1,2 @@
 
-export {default as BgEffect} from './bgEffect/Main';
-export { default as Effect } from './bgEffect/BgEffect';
+export {default as OptionsButton} from './optionsButton';

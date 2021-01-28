@@ -3,4 +3,4 @@
  */
 
 
-export { BgEffect, Effect} from './components'
+export { OptionsButton} from './components'
